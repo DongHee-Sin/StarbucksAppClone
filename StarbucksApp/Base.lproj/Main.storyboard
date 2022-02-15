@@ -206,7 +206,7 @@
                                                                                         <state key="normal" title="Button"/>
                                                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                                                         <connections>
-                                                                                            <segue destination="rKN-bt-AUy" kind="showDetail" id="yHh-sj-14X"/>
+                                                                                            <segue destination="rKN-bt-AUy" kind="showDetail" id="xZr-jf-skG"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                 </subviews>
@@ -1544,7 +1544,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31O-g8-NTc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="744.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Hp-Tq-XEf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="998"/>
@@ -1997,12 +1997,36 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="4zX-k8-iIa"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="9KZ-4x-7Gf"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9n-py-JsK" userLabel="주문 버튼 View">
+                                <rect key="frame" x="0.0" y="744.5" width="414" height="63.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3k-fG-vrE">
+                                        <rect key="frame" x="40" y="15" width="334" height="33"/>
+                                        <color key="backgroundColor" red="0.070588235294117646" green="0.65098039215686276" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="주문하기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="e3k-fG-vrE" firstAttribute="centerY" secondItem="e9n-py-JsK" secondAttribute="centerY" id="Tv8-h9-qqp"/>
+                                    <constraint firstAttribute="trailing" secondItem="e3k-fG-vrE" secondAttribute="trailing" constant="40" id="lGd-7o-VCS"/>
+                                    <constraint firstItem="e3k-fG-vrE" firstAttribute="leading" secondItem="e9n-py-JsK" secondAttribute="leading" constant="40" id="tYt-5d-3Dg"/>
+                                    <constraint firstAttribute="width" secondItem="e9n-py-JsK" secondAttribute="height" multiplier="6.5:1" id="yKf-YW-Fjj"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u6w-xm-aDM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="u6w-xm-aDM" firstAttribute="bottom" secondItem="31O-g8-NTc" secondAttribute="bottom" id="4GW-Pd-Lhj"/>
+                            <constraint firstItem="e9n-py-JsK" firstAttribute="leading" secondItem="u6w-xm-aDM" secondAttribute="leading" id="37X-Re-7Y3"/>
+                            <constraint firstItem="e9n-py-JsK" firstAttribute="top" secondItem="31O-g8-NTc" secondAttribute="bottom" id="5f9-Ps-cqL"/>
+                            <constraint firstItem="u6w-xm-aDM" firstAttribute="bottom" secondItem="e9n-py-JsK" secondAttribute="bottom" id="7Th-Xz-efZ"/>
                             <constraint firstItem="31O-g8-NTc" firstAttribute="top" secondItem="u6w-xm-aDM" secondAttribute="top" id="CtE-3P-p8V"/>
+                            <constraint firstItem="u6w-xm-aDM" firstAttribute="trailing" secondItem="e9n-py-JsK" secondAttribute="trailing" id="QNn-Hd-waC"/>
                             <constraint firstItem="31O-g8-NTc" firstAttribute="leading" secondItem="u6w-xm-aDM" secondAttribute="leading" id="RkC-cg-DNC"/>
                             <constraint firstItem="u6w-xm-aDM" firstAttribute="trailing" secondItem="31O-g8-NTc" secondAttribute="trailing" id="Xdz-PP-aNd"/>
                             <constraint firstItem="UyB-hf-EiA" firstAttribute="width" secondItem="u6w-xm-aDM" secondAttribute="width" multiplier="0.3" id="aoa-TK-EbD"/>
@@ -2011,11 +2035,12 @@
                     <navigationItem key="navigationItem" id="a4N-lz-hmz"/>
                     <connections>
                         <outlet property="hotOrIced" destination="d2R-bx-Qn4" id="30w-nA-wmU"/>
+                        <outlet property="orderButton" destination="e3k-fG-vrE" id="mKb-FS-5Mp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snq-hk-8n4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79.710144927536234" y="1681.4732142857142"/>
+            <point key="canvasLocation" x="-1071" y="1668"/>
         </scene>
         <!--Pay-->
         <scene sceneID="yRa-zc-gKA">
