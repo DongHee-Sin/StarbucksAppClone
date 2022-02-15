@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zVV-I4-mSp">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1062.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1535.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYl-Lb-Zvj" userLabel="상단View">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="301.5"/>
@@ -482,7 +482,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="w3J-e5-4T6" secondAttribute="bottom" id="Uq1-Yl-V5A"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thH-YB-u8Z" userLabel="중상단 광고">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thH-YB-u8Z" userLabel="케이스 광고">
                                                 <rect key="frame" x="0.0" y="845.5" width="414" height="217"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="케이스" translatesAutoresizingMaskIntoConstraints="NO" id="7NZ-yr-zMo">
@@ -507,6 +507,33 @@
                                                     <constraint firstItem="7NZ-yr-zMo" firstAttribute="top" secondItem="thH-YB-u8Z" secondAttribute="top" id="j4q-OR-u0B"/>
                                                     <constraint firstItem="7NZ-yr-zMo" firstAttribute="leading" secondItem="thH-YB-u8Z" secondAttribute="leading" id="kMz-WU-F3n"/>
                                                     <constraint firstItem="no3-XB-Z0E" firstAttribute="top" secondItem="thH-YB-u8Z" secondAttribute="top" id="vBw-YL-WR2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLo-wS-7cl" userLabel="봄 광고">
+                                                <rect key="frame" x="0.0" y="1062.5" width="414" height="473"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="봄" translatesAutoresizingMaskIntoConstraints="NO" id="hHT-zj-9AC">
+                                                        <rect key="frame" x="10" y="10" width="394" height="453"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="hHT-zj-9AC" secondAttribute="height" multiplier="1:1.15" id="c9I-Si-SG3"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6p-jN-R1n" userLabel="봄 버튼">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="473"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="hHT-zj-9AC" firstAttribute="leading" secondItem="yLo-wS-7cl" secondAttribute="leading" constant="10" id="CfS-kk-y7b"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hHT-zj-9AC" secondAttribute="trailing" constant="10" id="GcP-Is-EXf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="C6p-jN-R1n" secondAttribute="trailing" id="T5a-q0-nfd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hHT-zj-9AC" secondAttribute="bottom" constant="10" id="Vvg-Ex-rnM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="C6p-jN-R1n" secondAttribute="bottom" id="YF4-fA-cNz"/>
+                                                    <constraint firstItem="hHT-zj-9AC" firstAttribute="top" secondItem="yLo-wS-7cl" secondAttribute="top" constant="10" id="k3z-z9-mPc"/>
+                                                    <constraint firstItem="C6p-jN-R1n" firstAttribute="leading" secondItem="yLo-wS-7cl" secondAttribute="leading" id="npF-8w-7h6"/>
+                                                    <constraint firstItem="C6p-jN-R1n" firstAttribute="top" secondItem="yLo-wS-7cl" secondAttribute="top" id="xpb-mc-fxo"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -581,6 +608,7 @@
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="봄" width="1474" height="1748"/>
         <image name="봄 딸기 라때" width="1042" height="1036"/>
         <image name="상단이미지" width="1125" height="621"/>
         <image name="아이스 자몽 허니 블랙 티" width="1022" height="1033"/>
