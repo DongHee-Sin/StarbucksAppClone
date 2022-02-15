@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="StarbucksApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -206,7 +206,7 @@
                                                                                         <state key="normal" title="Button"/>
                                                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                                                         <connections>
-                                                                                            <segue destination="rKN-bt-AUy" kind="showDetail" id="xZr-jf-skG"/>
+                                                                                            <action selector="didTouchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f5Q-qx-yEY"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                 </subviews>
@@ -1528,23 +1528,22 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zga-fG-Vjq" secondAttribute="bottom" id="yNE-g1-jVY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="oNx-L6-NPW"/>
                     <navigationItem key="navigationItem" id="oWb-dd-FOb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191.30434782608697" y="944.86607142857133"/>
+            <point key="canvasLocation" x="718.84057971014499" y="944.86607142857133"/>
         </scene>
         <!--Product Info View Controller-->
         <scene sceneID="H33-oT-8H4">
             <objects>
-                <viewController id="rKN-bt-AUy" customClass="ProductInfoViewController" customModule="StarbucksApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="productView" id="rKN-bt-AUy" customClass="ProductInfoViewController" customModule="StarbucksApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2pe-mc-8fh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31O-g8-NTc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="744.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="754.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Hp-Tq-XEf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="998"/>
@@ -1568,6 +1567,9 @@
                                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="fallBackButton:" destination="rKN-bt-AUy" eventType="touchUpInside" id="LTd-Pj-rfI"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFr-c9-utZ">
                                                         <rect key="frame" x="357.5" y="5" width="56.5" height="56.5"/>
@@ -1998,7 +2000,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="9KZ-4x-7Gf"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9n-py-JsK" userLabel="주문 버튼 View">
-                                <rect key="frame" x="0.0" y="744.5" width="414" height="63.5"/>
+                                <rect key="frame" x="0.0" y="798.5" width="414" height="63.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3k-fG-vrE">
                                         <rect key="frame" x="40" y="15" width="334" height="33"/>
@@ -2036,11 +2038,16 @@
                     <connections>
                         <outlet property="hotOrIced" destination="d2R-bx-Qn4" id="30w-nA-wmU"/>
                         <outlet property="orderButton" destination="e3k-fG-vrE" id="mKb-FS-5Mp"/>
+                        <outlet property="price" destination="00k-dy-E9W" id="gZl-ox-rhd"/>
+                        <outlet property="productEnglishName" destination="Q7B-Cs-EMP" id="cZc-Uk-FMb"/>
+                        <outlet property="productImage" destination="Lez-t0-vi2" id="OCF-o5-gy8"/>
+                        <outlet property="productInfo" destination="24J-QK-69N" id="P4u-fm-XMr"/>
+                        <outlet property="productName" destination="3iu-L0-vzN" id="op8-KQ-QAH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snq-hk-8n4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1071" y="1668"/>
+            <point key="canvasLocation" x="-191" y="1714"/>
         </scene>
         <!--Pay-->
         <scene sceneID="yRa-zc-gKA">
@@ -2057,7 +2064,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ss-De-yuo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="648" y="941"/>
+            <point key="canvasLocation" x="1557.9710144927537" y="940.84821428571422"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cBu-Ny-jIP">
@@ -2070,13 +2077,31 @@
                         <color key="tintColor" red="0.2274509804" green="0.58431372550000005" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ZsC-Sn-iFj"/>
+                        <segue destination="ZKL-dk-rWl" kind="relationship" relationship="viewControllers" id="ZsC-Sn-iFj"/>
                         <segue destination="ERw-iS-PuX" kind="relationship" relationship="viewControllers" id="zff-ET-HCY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPv-9W-Yg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="00n-Bs-Kab">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZKL-dk-rWl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="oNx-L6-NPW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eZb-mL-otG">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Dbd-8a-m0A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbI-DV-Oaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.30434782608697" y="944.86607142857133"/>
         </scene>
     </scenes>
     <resources>

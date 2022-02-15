@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D07EB10B27BBEC0B008A3D23 /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07EB10A27BBEC0B008A3D23 /* ProductInfo.swift */; };
 		D0C75FFB27B8925200ED0DC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C75FFA27B8925200ED0DC4 /* AppDelegate.swift */; };
 		D0C75FFD27B8925200ED0DC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C75FFC27B8925200ED0DC4 /* SceneDelegate.swift */; };
 		D0C75FFF27B8925200ED0DC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C75FFE27B8925200ED0DC4 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D07EB10A27BBEC0B008A3D23 /* ProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfo.swift; sourceTree = "<group>"; };
 		D0C75FF727B8925200ED0DC4 /* StarbucksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C75FFA27B8925200ED0DC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C75FFC27B8925200ED0DC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				D0F800F827BB40D500AB459C /* CustomClass.swift */,
 				D0C7600027B8925200ED0DC4 /* Main.storyboard */,
 				D0F800FA27BB743600AB459C /* ProductInfoViewController.swift */,
+				D07EB10A27BBEC0B008A3D23 /* ProductInfo.swift */,
 				D0C7600327B8925300ED0DC4 /* Assets.xcassets */,
 				D0C7600527B8925300ED0DC4 /* LaunchScreen.storyboard */,
 				D0C7600827B8925300ED0DC4 /* Info.plist */,
@@ -147,6 +150,7 @@
 				D0F800F927BB40D500AB459C /* CustomClass.swift in Sources */,
 				D0C75FFF27B8925200ED0DC4 /* ViewController.swift in Sources */,
 				D0C75FFB27B8925200ED0DC4 /* AppDelegate.swift in Sources */,
+				D07EB10B27BBEC0B008A3D23 /* ProductInfo.swift in Sources */,
 				D0F800FB27BB743600AB459C /* ProductInfoViewController.swift in Sources */,
 				D0C75FFD27B8925200ED0DC4 /* SceneDelegate.swift in Sources */,
 			);
