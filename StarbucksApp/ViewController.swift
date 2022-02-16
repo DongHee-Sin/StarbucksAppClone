@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ProductDataDelegate {
+class ViewController: MainViewController, ProductDataDelegate {
     
     // MARK: - 상품 버튼들 연결
     @IBOutlet weak var a: UIButton!
@@ -94,8 +94,7 @@ class ViewController: UIViewController, ProductDataDelegate {
             
             self.navigationController?.pushViewController(popUpView, animated: false)
         }
-        
-//        print(UserDefaults.standard.bool(forKey: "popUpSwitch"))
+
         
         
         // MARK: - 버튼들 Target 지정

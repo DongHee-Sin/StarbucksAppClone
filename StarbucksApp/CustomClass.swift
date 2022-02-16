@@ -65,3 +65,9 @@ open class VerticalAlignLabel: UILabel {
     }
     
 }
+
+
+
+class customUIViewController: UIViewController {
+    
+}

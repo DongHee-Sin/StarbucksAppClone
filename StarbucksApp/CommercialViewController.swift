@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommercialViewController: UIViewController {
+class CommercialViewController: MainViewController {
     
     // Header
     @IBOutlet weak var headerLine: UIView!
@@ -35,9 +35,8 @@ class CommercialViewController: UIViewController {
         
         
         // 제목View 테두리 지정
-        titleView.layer.borderWidth = 1
-        titleView.layer.borderColor = UIColor.lightGray.cgColor
-//        titleView.layer.borderColor = UIColor.black.cgColor
+        addBorderToUIView(titleView, size: 1, color: UIColor.lightGray.cgColor)
+        
         
         // 탭바 컨트롤러 OFF
         tabBarController?.tabBar.isHidden = true
