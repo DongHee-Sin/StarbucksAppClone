@@ -29,6 +29,12 @@ class ViewController: UIViewController, ProductDataDelegate {
     
     
     
+    // MARK: - 광고 버튼 연결
+    @IBOutlet weak var commercialButton: UIButton!
+    
+    
+    
+    
     // MARK: - User Default
     var isPopUpOn: Bool = true
     
@@ -49,7 +55,7 @@ class ViewController: UIViewController, ProductDataDelegate {
     
     
     // MARK: - 버튼이 눌리면 동작할 함수
-    @objc func testMethod(_ sender: UIButton) {
+    @objc func didProductButtonTouched(_ sender: UIButton) {
         // 선택된 상품의 이름을 가져와서 변수에 저장
         guard let productName = sender.superview?.subviews[1] as? UILabel else {
             return
@@ -64,6 +70,15 @@ class ViewController: UIViewController, ProductDataDelegate {
         
         self.navigationController?.pushViewController(productView, animated: true)
     }
+    
+    @objc func didCommercialButtonTouched() {
+        guard let commercialView = storyboard?.instantiateViewController(withIdentifier: "commercialView") as? CommercialViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(commercialView, animated: true)
+    }
+    
+    
     
     
     
@@ -80,25 +95,27 @@ class ViewController: UIViewController, ProductDataDelegate {
             self.navigationController?.pushViewController(popUpView, animated: false)
         }
         
-        print(UserDefaults.standard.bool(forKey: "popUpSwitch"))
+//        print(UserDefaults.standard.bool(forKey: "popUpSwitch"))
+        
         
         // MARK: - 버튼들 Target 지정
-        a.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        b.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        c.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        d.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        e.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        f.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        g.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        h.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        i.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        j.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        k.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        l.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        m.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        n.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        o.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
-        p.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        a.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        b.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        c.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        d.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        e.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        f.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        g.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        h.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        i.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        j.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        k.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        l.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        m.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        n.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        o.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        p.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
+        commercialButton.addTarget(self, action: #selector(didCommercialButtonTouched), for: .touchUpInside)
     }
 }
 
