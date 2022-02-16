@@ -9,13 +9,32 @@ import UIKit
 
 class ViewController: UIViewController, ProductDataDelegate {
     
+    // MARK: - 상품 버튼들 연결
+    @IBOutlet weak var a: UIButton!
+    @IBOutlet weak var b: UIButton!
+    @IBOutlet weak var c: UIButton!
+    @IBOutlet weak var d: UIButton!
+    @IBOutlet weak var e: UIButton!
+    @IBOutlet weak var f: UIButton!
+    @IBOutlet weak var g: UIButton!
+    @IBOutlet weak var h: UIButton!
+    @IBOutlet weak var i: UIButton!
+    @IBOutlet weak var j: UIButton!
+    @IBOutlet weak var k: UIButton!
+    @IBOutlet weak var l: UIButton!
+    @IBOutlet weak var m: UIButton!
+    @IBOutlet weak var n: UIButton!
+    @IBOutlet weak var o: UIButton!
+    @IBOutlet weak var p: UIButton!
+    
+    
     
     
     // 버튼이 눌린 상품의 이름을 저장하는 변수
     var touchedProductName: String?
     
     
-    // Delegate 통해서 함수를 호출하면 버튼이 눌린 상품의 이름을 반환하는 함수 작성
+    // MARK: - Delegate Protocol 함수
     func getProductName() -> String {
         if let noneOptionalName = touchedProductName {
             return noneOptionalName
@@ -25,8 +44,8 @@ class ViewController: UIViewController, ProductDataDelegate {
     }
     
     
-    // 상품 버튼을 눌렀을 때 작동할 함수
-    func productButtonTouched(_ sender: UIButton) {
+    // MARK: - 버튼이 눌리면 동작할 함수
+    @objc func testMethod(_ sender: UIButton) {
         // 선택된 상품의 이름을 가져와서 변수에 저장
         guard let productName = sender.superview?.subviews[1] as? UILabel else {
             return
@@ -44,15 +63,27 @@ class ViewController: UIViewController, ProductDataDelegate {
     
     
     
-    
-    @IBAction func didTouchedButton(_ sender: UIButton) {
-        productButtonTouched(sender)
-    }
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // MARK: - 버튼들 Target 지정
+        a.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        b.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        c.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        d.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        e.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        f.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        g.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        h.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        i.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        j.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        k.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        l.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        m.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        n.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        o.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
+        p.addTarget(self, action: #selector(testMethod), for: .touchUpInside)
     }
 }
 

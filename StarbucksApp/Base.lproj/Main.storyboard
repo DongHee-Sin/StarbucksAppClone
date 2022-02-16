@@ -205,9 +205,6 @@
                                                                                         <rect key="frame" x="0.0" y="0.0" width="165.5" height="215.5"/>
                                                                                         <state key="normal" title="Button"/>
                                                                                         <buttonConfiguration key="configuration" style="plain"/>
-                                                                                        <connections>
-                                                                                            <action selector="didTouchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f5Q-qx-yEY"/>
-                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1529,6 +1526,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oWb-dd-FOb"/>
+                    <connections>
+                        <outlet property="a" destination="yoA-WT-C9N" id="c9M-ew-fJR"/>
+                        <outlet property="b" destination="TYa-P8-Cml" id="G7q-CV-UNA"/>
+                        <outlet property="c" destination="37Q-D9-KIk" id="piI-hq-2K5"/>
+                        <outlet property="d" destination="07x-pe-v8t" id="WN6-Wb-cGM"/>
+                        <outlet property="e" destination="sFi-8I-sdI" id="Z1z-go-luH"/>
+                        <outlet property="f" destination="vVY-Um-ozZ" id="fce-Y6-G1C"/>
+                        <outlet property="g" destination="5ai-YH-RHg" id="ejJ-SA-VdO"/>
+                        <outlet property="h" destination="qZJ-wq-KhK" id="qpv-Oh-2vp"/>
+                        <outlet property="i" destination="0hs-gw-sAj" id="0sl-Pq-hah"/>
+                        <outlet property="j" destination="vtz-yP-8fa" id="Fqs-3X-pVr"/>
+                        <outlet property="k" destination="l0w-nj-0XL" id="sSG-dh-5Ih"/>
+                        <outlet property="l" destination="jAF-Gk-woK" id="6M9-Yw-ZVV"/>
+                        <outlet property="m" destination="Z7P-Dq-4xA" id="ZDB-k8-Uz8"/>
+                        <outlet property="n" destination="bl7-zW-Skq" id="ZQv-6s-6dt"/>
+                        <outlet property="o" destination="PPD-Qd-v4O" id="k5A-sz-AED"/>
+                        <outlet property="p" destination="SS6-UI-3oB" id="1aQ-Fw-ssc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -1664,17 +1679,29 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ysk-2c-xJZ" userLabel="핫or아이스" customClass="CustomLabel" customModule="StarbucksApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="559" width="414" height="69"/>
                                                 <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="아이스" translatesAutoresizingMaskIntoConstraints="NO" id="BeR-0P-jTU">
+                                                        <rect key="frame" x="30" y="-1" width="354" height="71"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="BeR-0P-jTU" secondAttribute="height" multiplier="10:2" id="Xbk-th-25H"/>
+                                                        </constraints>
+                                                    </imageView>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="d2R-bx-Qn4">
                                                         <rect key="frame" x="30" y="19" width="354" height="32"/>
                                                         <segments>
-                                                            <segment title="HOT"/>
-                                                            <segment title="ICED"/>
+                                                            <segment title=""/>
+                                                            <segment title=""/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="didTouched:" destination="rKN-bt-AUy" eventType="valueChanged" id="UEX-g1-RVb"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="BeR-0P-jTU" secondAttribute="trailing" constant="30" id="5mE-gp-XWv"/>
+                                                    <constraint firstItem="BeR-0P-jTU" firstAttribute="leading" secondItem="Ysk-2c-xJZ" secondAttribute="leading" constant="30" id="76Y-na-cNO"/>
                                                     <constraint firstItem="d2R-bx-Qn4" firstAttribute="centerY" secondItem="Ysk-2c-xJZ" secondAttribute="centerY" id="Fnc-nt-RF9"/>
+                                                    <constraint firstItem="BeR-0P-jTU" firstAttribute="centerY" secondItem="Ysk-2c-xJZ" secondAttribute="centerY" id="nkY-nT-Nwl"/>
                                                     <constraint firstItem="d2R-bx-Qn4" firstAttribute="leading" secondItem="Ysk-2c-xJZ" secondAttribute="leading" constant="30" id="x5G-eN-nzA"/>
                                                     <constraint firstAttribute="trailing" secondItem="d2R-bx-Qn4" secondAttribute="trailing" constant="30" id="yVm-vg-jz1"/>
                                                 </constraints>
@@ -2043,6 +2070,7 @@
                         <outlet property="productImage" destination="Lez-t0-vi2" id="OCF-o5-gy8"/>
                         <outlet property="productInfo" destination="24J-QK-69N" id="P4u-fm-XMr"/>
                         <outlet property="productName" destination="3iu-L0-vzN" id="op8-KQ-QAH"/>
+                        <outlet property="segmentedImage" destination="BeR-0P-jTU" id="Vte-yf-Zxi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snq-hk-8n4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2127,6 +2155,7 @@
         <image name="스타벅스 카드" width="1125" height="578"/>
         <image name="스프링 가든 자스민 드링크" width="1016" height="1025"/>
         <image name="아아 누끼" width="497" height="502"/>
+        <image name="아이스" width="1023" height="180"/>
         <image name="아이스 자몽 누끼" width="497" height="502"/>
         <image name="아이스 자몽 허니 블랙 티" width="1022" height="1033"/>
         <image name="아이스 카페 라때" width="1042" height="1034"/>

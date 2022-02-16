@@ -20,8 +20,19 @@ class ProductInfoViewController: UIViewController {
     @IBOutlet weak var productEnglishName: UILabel!
     @IBOutlet weak var productInfo: UILabel!
     @IBOutlet weak var price: CustomLabel!
+    
+    
     // 핫/아이스 토글
+    @IBOutlet weak var segmentedImage: UIImageView!
     @IBOutlet weak var hotOrIced: UISegmentedControl!
+    @IBAction func didTouched(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            segmentedImage.image = UIImage(named: "핫.jpg")
+        default:
+            segmentedImage.image = UIImage(named: "아이스.jpg")
+        }
+    }
     
     
     // 주문하기 버튼
@@ -45,8 +56,7 @@ class ProductInfoViewController: UIViewController {
         
         
         // Segmented Control 설정
-        hotOrIced.backgroundColor = .white
-        hotOrIced.selectedSegmentTintColor = .orange
+        hotOrIced.alpha = 0.02
         
         
         // 주문버튼 테두리 설정
@@ -67,6 +77,11 @@ class ProductInfoViewController: UIViewController {
         productInfo.text = productInfoDictionary[name] ?? ""
         price.text = DecimalWon(value: productPriceDictionary[name] ?? 0)
         hotOrIced.selectedSegmentIndex = productIsHot[name]! ? 0 : 1
+        if hotOrIced.selectedSegmentIndex == 0 {
+            segmentedImage.image = UIImage(named: "핫.jpg")
+        }else {
+            segmentedImage.image = UIImage(named: "아이스.jpg")
+        }
     }
     
     // 숫자 천단위로 콤마 찍어서 문자열로 반환 함수
@@ -74,7 +89,6 @@ class ProductInfoViewController: UIViewController {
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = .decimal
             let result = numberFormatter.string(from: NSNumber(value: value))! + "원"
-            
             return result
     }
 }
