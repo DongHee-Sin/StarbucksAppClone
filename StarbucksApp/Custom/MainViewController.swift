@@ -74,6 +74,10 @@ class MainViewController: UIViewController, ProductDataDelegate {
         to.layer.borderColor = color
     }
     
+    // Radius 추가
+    func addRadiusToUIView(_ to: UIView, size: CGFloat) {
+        to.layer.cornerRadius = size
+    }
     
     
     

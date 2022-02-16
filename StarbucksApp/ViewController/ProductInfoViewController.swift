@@ -50,6 +50,9 @@ class ProductInfoViewController: MainViewController {
     var delegate: ProductDataDelegate?
     
     
+    // 상품 이름
+    var receivedProductName: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,8 +74,8 @@ class ProductInfoViewController: MainViewController {
         
         
         // delegate로 받아온 데이터 처리
-        let receivedProductName: String = delegate?.getProductName() ?? ""
-        viewUpdateBy(receivedProductName)
+        receivedProductName = delegate?.getProductName() ?? ""
+        viewUpdateBy(receivedProductName!)
     }
     
     
