@@ -29,6 +29,10 @@ class ViewController: UIViewController, ProductDataDelegate {
     
     
     
+    // MARK: - User Default
+    var isPopUpOn: Bool = true
+    
+    
     
     // 버튼이 눌린 상품의 이름을 저장하는 변수
     var touchedProductName: String?
@@ -66,6 +70,17 @@ class ViewController: UIViewController, ProductDataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // MARK: - 팝업View 띄우기
+        isPopUpOn = UserDefaults.standard.bool(forKey: "popUpSwitch")
+        if isPopUpOn == true {
+            guard let popUpView = storyboard?.instantiateViewController(withIdentifier: "popUpView") as? PopUpViewController else {
+                return
+            }
+            
+            self.navigationController?.pushViewController(popUpView, animated: false)
+        }
+        
+        print(UserDefaults.standard.bool(forKey: "popUpSwitch"))
         
         // MARK: - 버튼들 Target 지정
         a.addTarget(self, action: #selector(testMethod), for: .touchUpInside)

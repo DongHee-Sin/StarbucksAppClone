@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-// UILabel 자간
+// MARK: - UILabel 자간 조절
 open class CustomLabel : UILabel {
     @IBInspectable open var characterSpacing:CGFloat = 1 {
         didSet {
@@ -21,7 +21,7 @@ open class CustomLabel : UILabel {
 }
 
 
-// UILabel 위쪽 정렬
+// MARK: - UILabel 위쪽 정렬
 open class VerticalAlignLabel: UILabel {
     enum VerticalAlignment {
         case top
