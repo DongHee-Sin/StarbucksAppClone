@@ -13,6 +13,10 @@ class OrderViewController: MainViewController {
     @IBOutlet weak var footerLine: UIView!
     
     
+    // delegate
+    var delegate: ProductDataDelegate?
+    
+    
     // 버튼 스타일 지정 위한 연결
     @IBOutlet weak var orderButton: UIButton!
     @IBOutlet weak var putInButton: UIButton!

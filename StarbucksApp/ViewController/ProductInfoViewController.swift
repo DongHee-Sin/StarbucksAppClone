@@ -13,7 +13,7 @@ protocol ProductDataDelegate {
 }
 
 
-class ProductInfoViewController: UIViewController {
+class ProductInfoViewController: MainViewController {
     // UI 정보
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
@@ -41,7 +41,7 @@ class ProductInfoViewController: UIViewController {
     
     // 뒤로가기 버튼
     @IBAction func fallBackButton(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        popView(animation: true)
     }
     
     
@@ -59,14 +59,22 @@ class ProductInfoViewController: UIViewController {
         hotOrIced.alpha = 0.02
         
         
-        // 주문버튼 테두리 설정
-        orderButton.layer.cornerRadius = 15
+        // 주문버튼 테두리 둥글게
+        addRadiusToUIButton(orderButton, size: 15)
+        
+        
+        // 탭바 숨기기
+        tabBarControllerHidden()
+        
+        // 주문하기 버튼 addTarget
+        orderButton.addTarget(self, action: #selector(didOrderButtonTouched), for: .touchUpInside)
         
         
         // delegate로 받아온 데이터 처리
         let receivedProductName: String = delegate?.getProductName() ?? ""
         viewUpdateBy(receivedProductName)
     }
+    
     
     
     // 매개변수를 가지고 뷰 업데이트 함수
@@ -82,13 +90,5 @@ class ProductInfoViewController: UIViewController {
         }else {
             segmentedImage.image = UIImage(named: "아이스.jpg")
         }
-    }
-    
-    // 숫자 천단위로 콤마 찍어서 문자열로 반환 함수
-    func DecimalWon(value: Int) -> String{
-            let numberFormatter = NumberFormatter()
-            numberFormatter.numberStyle = .decimal
-            let result = numberFormatter.string(from: NSNumber(value: value))! + "원"
-            return result
     }
 }

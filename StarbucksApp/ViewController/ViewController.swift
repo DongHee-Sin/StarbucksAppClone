@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: MainViewController, ProductDataDelegate {
+class ViewController: MainViewController {
     
     // MARK: - 상품 버튼들 연결
     @IBOutlet weak var a: UIButton!
@@ -40,53 +40,12 @@ class ViewController: MainViewController, ProductDataDelegate {
     
     
     
-    // 버튼이 눌린 상품의 이름을 저장하는 변수
-    var touchedProductName: String?
-    
-    
-    // MARK: - Delegate Protocol 함수
-    func getProductName() -> String {
-        if let noneOptionalName = touchedProductName {
-            return noneOptionalName
-        }else {
-            return ""
-        }
-    }
-    
-    
-    // MARK: - 버튼이 눌리면 동작할 함수
-    @objc func didProductButtonTouched(_ sender: UIButton) {
-        // 선택된 상품의 이름을 가져와서 변수에 저장
-        guard let productName = sender.superview?.subviews[1] as? UILabel else {
-            return
-        }
-        touchedProductName = productName.text ?? ""
-        
-        // 뷰 연결, delegate지정
-        guard let productView = storyboard?.instantiateViewController(withIdentifier: "productView") as? ProductInfoViewController else {
-            return
-        }
-        productView.delegate = self
-        
-        self.navigationController?.pushViewController(productView, animated: true)
-    }
-    
-    @objc func didCommercialButtonTouched() {
-        guard let commercialView = storyboard?.instantiateViewController(withIdentifier: "commercialView") as? CommercialViewController else {
-            return
-        }
-        self.navigationController?.pushViewController(commercialView, animated: true)
-    }
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // MARK: - 팝업View 띄우기
-        isPopUpOn = UserDefaults.standard.bool(forKey: "popUpSwitch")
+//        isPopUpOn = UserDefaults.standard.bool(forKey: "popUpSwitch")
+        isPopUpOn = true
         if isPopUpOn == true {
             guard let popUpView = storyboard?.instantiateViewController(withIdentifier: "popUpView") as? PopUpViewController else {
                 return

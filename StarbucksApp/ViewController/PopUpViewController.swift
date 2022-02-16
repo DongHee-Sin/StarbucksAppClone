@@ -19,10 +19,10 @@ class PopUpViewController: MainViewController {
     
     @IBAction func didDontSeeButtonTouched(_ sender: UIButton) {
         UserDefaults.standard.set(false, forKey: "popUpSwitch")
-        popView()
+        popView(animation: false)
     }
     @IBAction func didCloseButtonTouched(_ sender: UIButton) {
-        popView()
+        popView(animation: false)
     }
     
     
@@ -34,10 +34,6 @@ class PopUpViewController: MainViewController {
         
         
         // 탭바 컨트롤러 히든
-        tabBarController?.tabBar.isHidden = true
-    }
-    
-    func popView() {
-        self.navigationController?.popViewController(animated: false)
+        tabBarControllerHidden()
     }
 }
