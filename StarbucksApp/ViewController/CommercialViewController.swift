@@ -17,6 +17,7 @@ class CommercialViewController: MainViewController {
     
     // 뒤로가기 버튼
     @IBAction func popView(_ sender: UIButton) {
+        tabBarController?.tabBar.isHidden = false
         self.navigationController?.popViewController(animated: true)
     }
     

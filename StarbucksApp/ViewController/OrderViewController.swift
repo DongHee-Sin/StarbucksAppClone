@@ -14,16 +14,20 @@ class OrderViewController: MainViewController {
     @IBOutlet weak var productPrice: CustomLabel!
     @IBOutlet weak var orderCount: UILabel!
     
+    var orderPrice: Int?
+    
     @IBAction func minusButton(_ sender: UIButton) {
         let currentCount: Int = Int(orderCount.text!)!
         if currentCount > 1 {
             orderCount.text = String(currentCount-1)
-            productPrice.text = DecimalWon(value: productPriceDictionary[productName.text!]! * Int(orderCount.text!)!)
+            orderPrice = productPriceDictionary[productName.text!]! * Int(orderCount.text!)!
+            productPrice.text = DecimalWon(value: orderPrice!)
         }
     }
     @IBAction func plusButton(_ sender: UIButton) {
         orderCount.text = String(Int(orderCount.text!)!+1)
-        productPrice.text = DecimalWon(value: productPriceDictionary[productName.text!]! * Int(orderCount.text!)!)
+        orderPrice = productPriceDictionary[productName.text!]! * Int(orderCount.text!)!
+        productPrice.text = DecimalWon(value: orderPrice!)
     }
     
     

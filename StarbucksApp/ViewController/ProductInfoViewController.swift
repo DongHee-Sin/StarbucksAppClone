@@ -41,6 +41,7 @@ class ProductInfoViewController: MainViewController {
     
     // 뒤로가기 버튼
     @IBAction func fallBackButton(_ sender: UIButton) {
+        tabBarController?.tabBar.isHidden = false
         popView(animation: true)
     }
     
