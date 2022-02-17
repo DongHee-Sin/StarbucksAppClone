@@ -45,6 +45,7 @@ class OrderViewController: MainViewController {
     @IBOutlet weak var putInButton: UIButton!
     
     
+    // MARK: - Segmented Control
     // 음료 사이즈 Segmented Control
     @IBOutlet weak var drinkSizeImage: UIImageView!
     @IBAction func chooseDrinkSize(_ sender: UISegmentedControl) {
@@ -59,6 +60,20 @@ class OrderViewController: MainViewController {
             drinkSizeImage.image = UIImage(named: "Venti.jpg")
         }
     }
+    
+    // 컵 선택 Segmented Control
+    @IBOutlet weak var chooseCupImage: UIImageView!
+    @IBAction func chooseCupButton(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            chooseCupImage.image = UIImage(named: "매장컵.jpeg")
+        case 1:
+            chooseCupImage.image = UIImage(named: "개인컵.jpeg")
+        default:
+            chooseCupImage.image = UIImage(named: "일회용컵.jpeg")
+        }
+    }
+    
     
     
     

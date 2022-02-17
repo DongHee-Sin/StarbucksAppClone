@@ -44,8 +44,8 @@ class ViewController: MainViewController {
         super.viewDidLoad()
         
         // MARK: - 팝업View 띄우기
-//        isPopUpOn = UserDefaults.standard.bool(forKey: "popUpSwitch")
-        isPopUpOn = true
+        isPopUpOn = UserDefaults.standard.bool(forKey: "popUpSwitch")
+//        isPopUpOn = true
         if isPopUpOn == true {
             guard let popUpView = storyboard?.instantiateViewController(withIdentifier: "popUpView") as? PopUpViewController else {
                 return
