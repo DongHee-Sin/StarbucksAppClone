@@ -29,8 +29,20 @@ class ProductInfoViewController: MainViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             segmentedImage.image = UIImage(named: "핫.jpg")
+            if productName.text == "아이스 자몽 허니 블랙 티" {
+                let mainVC = delegate as! MainViewController
+                mainVC.touchedProductName = "자몽 허니 블랙 티"
+                productName.text = "자몽 허니 블랙 티"
+                productImage.image = UIImage(named: "자몽 허니 블랙 티 BIG.jpg")
+            }
         default:
             segmentedImage.image = UIImage(named: "아이스.jpg")
+            if productName.text == "자몽 허니 블랙 티" {
+                let mainVC = delegate as! MainViewController
+                mainVC.touchedProductName = "아이스 자몽 허니 블랙 티"
+                productName.text = "아이스 자몽 허니 블랙 티"
+                productImage.image = UIImage(named: "아이스 자몽 허니 블랙 티 BIG.jpg")
+            }
         }
     }
     

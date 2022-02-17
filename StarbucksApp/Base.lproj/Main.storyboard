@@ -1641,8 +1641,8 @@
                                                 <rect key="frame" x="0.0" y="444" width="414" height="46"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="달콤한 유자와 알싸하고 은은한 진저, 우릴 수록 상쾌한 민트 티가 조화로운 유자 민트 티" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24J-QK-69N">
-                                                        <rect key="frame" x="27" y="0.0" width="310.5" height="41"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="27" y="0.0" width="352" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1651,8 +1651,9 @@
                                                 <constraints>
                                                     <constraint firstItem="24J-QK-69N" firstAttribute="top" secondItem="jOl-rJ-q0k" secondAttribute="top" id="GO0-GW-a1A"/>
                                                     <constraint firstAttribute="width" secondItem="jOl-rJ-q0k" secondAttribute="height" multiplier="9:1" id="GyW-RK-xn1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="24J-QK-69N" secondAttribute="bottom" constant="5" id="Ulc-To-YXQ"/>
                                                     <constraint firstItem="24J-QK-69N" firstAttribute="leading" secondItem="jOl-rJ-q0k" secondAttribute="leading" constant="27" id="ZRC-Hh-0N4"/>
-                                                    <constraint firstItem="24J-QK-69N" firstAttribute="width" secondItem="jOl-rJ-q0k" secondAttribute="width" multiplier="0.75" id="e0Y-5l-RZk"/>
+                                                    <constraint firstItem="24J-QK-69N" firstAttribute="width" secondItem="jOl-rJ-q0k" secondAttribute="width" multiplier="0.85" id="e0Y-5l-RZk"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDb-Kn-Suf" userLabel="가격" customClass="CustomLabel" customModule="StarbucksApp" customModuleProvider="target">
@@ -3101,7 +3102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4O-fX-Ov5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326" y="3158"/>
+            <point key="canvasLocation" x="287" y="3157"/>
         </scene>
         <!--Commercial View Controller-->
         <scene sceneID="UhG-Az-LDj">
