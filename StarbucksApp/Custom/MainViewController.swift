@@ -63,6 +63,16 @@ class MainViewController: UIViewController, ProductDataDelegate {
         self.present(orderView, animated: true, completion: nil)
     }
     
+    // 결제창 이동하는 버튼
+    @objc func didTouchedButtonToPayment() {
+        guard let paymentView = storyboard?.instantiateViewController(withIdentifier: "paymentView") as? PaymentViewController else {
+            return
+        }
+        paymentView.delegate = self
+        
+//        self.navigationController?.pushViewController(paymentView, animated: true)
+        self.present(paymentView, animated: true, completion: nil)
+    }
     
     
     

@@ -62,11 +62,16 @@ class OrderViewController: MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        // 주문하기 버튼 addTarget
+        orderButton.addTarget(self, action: #selector(didTouchedButtonToPayment), for: .touchUpInside)
+        
+        
         // UI 업데이트
         guard let productVC = delegate as? ProductInfoViewController else {
             return
         }
-        let toOrderProductName = productVC.receivedProductName
+        let toOrderProductName = productVC.delegate?.getProductName()
         productName.text = toOrderProductName!
         productPrice.text = DecimalWon(value: productPriceDictionary[toOrderProductName!]!)
         
