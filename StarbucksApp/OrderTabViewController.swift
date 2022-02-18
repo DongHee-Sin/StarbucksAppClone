@@ -17,12 +17,24 @@ class OrderTabViewController: MainViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
     
+    // 목록 글자, 초록바
+    @IBOutlet weak var entireMenuLabel: UILabel!
+    @IBOutlet weak var myOwnMenuLabel: UILabel!
+    @IBOutlet weak var entireGreenBar: UIView!
+    @IBOutlet weak var myOwnGreenBar: UIView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // switch 초기화면 세팅
         entireMenu.alpha = 1
         myOwnMenu.alpha = 0
+        myOwnMenuLabel.textColor = UIColor.lightGray
+        myOwnGreenBar.alpha = 0
+        
         
         
         
@@ -38,9 +50,17 @@ class OrderTabViewController: MainViewController {
         if sender.selectedSegmentIndex == 0 {
             entireMenu.alpha = 1
             myOwnMenu.alpha = 0
+            myOwnMenuLabel.textColor = UIColor.lightGray
+            myOwnGreenBar.alpha = 0
+            entireMenuLabel.textColor = UIColor.black
+            entireGreenBar.alpha = 1
         }else {
             entireMenu.alpha = 0
             myOwnMenu.alpha = 1
+            myOwnMenuLabel.textColor = UIColor.black
+            myOwnGreenBar.alpha = 1
+            entireMenuLabel.textColor = UIColor.lightGray
+            entireGreenBar.alpha = 0
         }
     }
     

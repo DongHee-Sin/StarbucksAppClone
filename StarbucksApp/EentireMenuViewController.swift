@@ -9,12 +9,22 @@ import UIKit
 
 class EntireMenuViewController: MainViewController {
     
+    // 상품 리스트 뷰
     @IBOutlet weak var drinkView: UIView!
     @IBOutlet weak var foodView: UIView!
     @IBOutlet weak var productView: UIView!
     
     
+    // 글자 UI
+    @IBOutlet weak var drinkLabel: UILabel!
+    @IBOutlet weak var foodLabel: UILabel!
+    @IBOutlet weak var productLabel: UILabel!
+    
+    
+    
+    // Segment Control
     @IBOutlet weak var segmentControl: UISegmentedControl!
+    
     
     
     @IBAction func switchViews(_ sender: UISegmentedControl) {
@@ -23,14 +33,23 @@ class EntireMenuViewController: MainViewController {
             drinkView.alpha = 1
             foodView.alpha = 0
             productView.alpha = 0
+            drinkLabel.textColor = UIColor.black
+            foodLabel.textColor = UIColor.lightGray
+            productLabel.textColor = UIColor.lightGray
         case 1:
             drinkView.alpha = 0
             foodView.alpha = 1
             productView.alpha = 0
+            drinkLabel.textColor = UIColor.lightGray
+            foodLabel.textColor = UIColor.black
+            productLabel.textColor = UIColor.lightGray
         default:
             drinkView.alpha = 0
             foodView.alpha = 0
             productView.alpha = 1
+            drinkLabel.textColor = UIColor.lightGray
+            foodLabel.textColor = UIColor.lightGray
+            productLabel.textColor = UIColor.black
         }
     }
     
