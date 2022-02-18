@@ -9,6 +9,15 @@ import UIKit
 
 class ViewController: MainViewController {
     
+    // MARK: - Header
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var toFixView: UIView!
+    
+    var maxTopHeight: CGFloat?
+    var minTopHeight: CGFloat?
+    
+    
+    
     // MARK: - 상품 버튼들 연결
     @IBOutlet weak var a: UIButton!
     @IBOutlet weak var b: UIButton!
@@ -56,6 +65,12 @@ class ViewController: MainViewController {
 
         
         
+        // MARK: - 상단 고정 View 잡기위한 높이값 받기
+        maxTopHeight = headerView.frame.height
+        minTopHeight = toFixView.frame.height
+        
+        
+        
         // MARK: - 버튼들 Target 지정
         a.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
         b.addTarget(self, action: #selector(didProductButtonTouched), for: .touchUpInside)
@@ -77,3 +92,35 @@ class ViewController: MainViewController {
     }
 }
 
+
+
+// ScrollView Delegate
+//extension ViewController: UIScrollViewDelegate {
+//
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//
+//        //현재 스크롤의 위치 (최상단 = 0)
+//        let y: CGFloat = scrollView.contentOffset.y
+//
+//        //변경될 최상단 뷰의 높이
+//        let ModifiedTopHeight: CGFloat = viewTopHeight.constant - y
+//
+//        // *** 변경될 높이가 최댓값을 초과함
+//        if(ModifiedTopHeight > maxTopHeight)
+//        {
+//            //현재 최상단뷰의 높이를 최댓값(250)으로 설정
+//            viewTopHeight.constant = maxTopHeight
+//        }// *** 변경될 높이가 최솟값 미만임
+//        else if(ModifiedTopHeight < minTopHeight)
+//        {
+//            //현재 최상단뷰의 높이를 최솟값(50+상태바높이)으로 설정
+//            viewTopHeight.constant = minTopHeight
+//        }// *** 변경될 높이가 최솟값(50+상태바높이)과 최댓값(250) 사이임
+//        else
+//        {
+//            //현재 최상단 뷰 높이를 변경함
+//            viewTopHeight.constant = ModifiedTopHeight
+//            scrollView.contentOffset.y = 0
+//        }
+//    }
+//}
