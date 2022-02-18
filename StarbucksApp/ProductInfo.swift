@@ -63,3 +63,18 @@ let productIsHot: [String: Bool] = [
     "스프링 가든 자스민 드링크": false,
     "봄 딸기 그린 크림 프라푸치노": false
 ]
+
+
+
+var isUserLikeProduct: [String: Bool] = [
+    "아이스 자몽 허니 블랙 티": false,
+    "자몽 허니 블랙 티": false,
+    "아이스 카페 라때": false,
+    "아이스 카페 아메리카노": false,
+    "콜드 브루": false,
+    "봄 딸기 라때": false,
+    "유자 민트 티": false,
+    "리저브 콜드 브루": false,
+    "스프링 가든 자스민 드링크": false,
+    "봄 딸기 그린 크림 프라푸치노": false
+]

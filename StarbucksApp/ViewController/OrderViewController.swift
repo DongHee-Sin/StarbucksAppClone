@@ -15,17 +15,16 @@ class OrderViewController: MainViewController {
     @IBOutlet weak var orderCount: UILabel!
     
     @IBOutlet weak var hearImage: UIImageView!
-    var isHeartSelected: Bool = false
     
     
     // 찜하기 버튼
     @IBAction func didHeartButtonTouched(_ sender: UIButton) {
-        if isHeartSelected == false {
+        if isUserLikeProduct[productName.text!]! == false {
             hearImage.image = UIImage(named: "heartSelected.jpeg")
-            isHeartSelected = true
+            isUserLikeProduct[productName.text!]! = true
         }else {
             hearImage.image = UIImage(named: "heartNomal.jpeg")
-            isHeartSelected = false
+            isUserLikeProduct[productName.text!]! = false
         }
     }
     
@@ -110,6 +109,15 @@ class OrderViewController: MainViewController {
         let toOrderProductName = productVC.delegate?.getProductName()
         productName.text = toOrderProductName!
         productPrice.text = DecimalWon(value: productPriceDictionary[toOrderProductName!]!)
+        
+        // 찜하기 버튼 UI 업데이트
+        if isUserLikeProduct[productName.text!]! == false {
+            hearImage.image = UIImage(named: "heartNomal.jpeg")
+        }else {
+            hearImage.image = UIImage(named: "heartSelected.jpeg")
+        }
+        
+        
         
         
         // UI 세팅
