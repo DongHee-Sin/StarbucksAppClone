@@ -28,22 +28,25 @@ class OrderViewController: MainViewController {
         }
     }
     
+    // 기준 금액
+    var basePrice: Int?
     
     
+    // 주문할 금액 (다 계산된거)
     var orderPrice: Int?
     
     @IBAction func minusButton(_ sender: UIButton) {
         let currentCount: Int = Int(orderCount.text!)!
         if currentCount > 1 {
             orderCount.text = String(currentCount-1)
-            orderPrice = productPriceDictionary[productName.text!]! * Int(orderCount.text!)!
-            productPrice.text = DecimalWon(value: orderPrice!)
+            updateOrderPrice()
+            updateOrderButtonText()
         }
     }
     @IBAction func plusButton(_ sender: UIButton) {
         orderCount.text = String(Int(orderCount.text!)!+1)
-        orderPrice = productPriceDictionary[productName.text!]! * Int(orderCount.text!)!
-        productPrice.text = DecimalWon(value: orderPrice!)
+        updateOrderPrice()
+        updateOrderButtonText()
     }
     
     
@@ -68,12 +71,24 @@ class OrderViewController: MainViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             drinkSizeImage.image = UIImage(named: "Short.jpg")
+            basePrice = productPriceDictionary[productName.text!]!
+            updateOrderPrice()
+            updateOrderButtonText()
         case 1:
             drinkSizeImage.image = UIImage(named: "Tall.jpg")
+            basePrice = productPriceDictionary[productName.text!]! + 500
+            updateOrderPrice()
+            updateOrderButtonText()
         case 2:
             drinkSizeImage.image = UIImage(named: "Grande.jpg")
+            basePrice = productPriceDictionary[productName.text!]! + 1000
+            updateOrderPrice()
+            updateOrderButtonText()
         default:
             drinkSizeImage.image = UIImage(named: "Venti.jpg")
+            basePrice = productPriceDictionary[productName.text!]! + 1500
+            updateOrderPrice()
+            updateOrderButtonText()
         }
     }
     
@@ -92,6 +107,17 @@ class OrderViewController: MainViewController {
     
     
     
+    // 주문금액 업데이트하는 함수
+    func updateOrderPrice() {
+        orderPrice = basePrice! * Int(orderCount.text!)!
+    }
+    
+    
+    // 주문하기 버튼의 금액 업데이트하는 함수
+    func updateOrderButtonText() {
+        productPrice.text = DecimalWon(value: orderPrice!)
+    }
+    
     
     
     override func viewDidLoad() {
@@ -108,7 +134,8 @@ class OrderViewController: MainViewController {
         }
         let toOrderProductName = productVC.delegate?.getProductName()
         productName.text = toOrderProductName!
-        productPrice.text = DecimalWon(value: productPriceDictionary[toOrderProductName!]!)
+        basePrice = productPriceDictionary[toOrderProductName!]!
+        productPrice.text = DecimalWon(value: basePrice!)
         
         // 찜하기 버튼 UI 업데이트
         if isUserLikeProduct[productName.text!]! == false {
