@@ -28,6 +28,11 @@ class OrderViewController: MainViewController {
         }
     }
     
+    
+    // 선택한 컵 사이즈
+    var selectedCupSize: String?
+    
+    
     // 기준 금액
     var basePrice: Int?
     
@@ -71,22 +76,26 @@ class OrderViewController: MainViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             drinkSizeImage.image = UIImage(named: "Short.jpg")
-            basePrice = productPriceDictionary[productName.text!]!
+            basePrice = productPriceDictionary[productName.text!]! - 500
+            selectedCupSize = "Short"
             updateOrderPrice()
             updateOrderButtonText()
         case 1:
             drinkSizeImage.image = UIImage(named: "Tall.jpg")
-            basePrice = productPriceDictionary[productName.text!]! + 500
+            basePrice = productPriceDictionary[productName.text!]!
+            selectedCupSize = "Tall"
             updateOrderPrice()
             updateOrderButtonText()
         case 2:
             drinkSizeImage.image = UIImage(named: "Grande.jpg")
-            basePrice = productPriceDictionary[productName.text!]! + 1000
+            basePrice = productPriceDictionary[productName.text!]! + 500
+            selectedCupSize = "Grande"
             updateOrderPrice()
             updateOrderButtonText()
         default:
             drinkSizeImage.image = UIImage(named: "Venti.jpg")
-            basePrice = productPriceDictionary[productName.text!]! + 1500
+            basePrice = productPriceDictionary[productName.text!]! + 1000
+            selectedCupSize = "Venti"
             updateOrderPrice()
             updateOrderButtonText()
         }

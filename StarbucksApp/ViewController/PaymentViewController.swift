@@ -53,7 +53,7 @@ class PaymentViewController: MainViewController {
         
         
         toPaymentProductImage.image = UIImage(named: "\(receivedProductName) 누끼.png")
-        toPaymentProductName.text = receivedProductName
+        toPaymentProductName.text = "\(receivedProductName) / \(orderVC.selectedCupSize!) / \(orderVC.orderCount.text!)"
         orderPrice.text = DecimalWon(value: receivedOrderPrice)
         finalPrice.text = DecimalWon(value: receivedOrderPrice)
         paymentButton.setTitle("\(finalPrice.text!) 결제하기", for: .normal)
