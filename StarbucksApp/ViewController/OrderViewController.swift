@@ -14,6 +14,23 @@ class OrderViewController: MainViewController {
     @IBOutlet weak var productPrice: CustomLabel!
     @IBOutlet weak var orderCount: UILabel!
     
+    @IBOutlet weak var hearImage: UIImageView!
+    var isHeartSelected: Bool = false
+    
+    
+    // 찜하기 버튼
+    @IBAction func didHeartButtonTouched(_ sender: UIButton) {
+        if isHeartSelected == false {
+            hearImage.image = UIImage(named: "heartSelected.jpeg")
+            isHeartSelected = true
+        }else {
+            hearImage.image = UIImage(named: "heartNomal.jpeg")
+            isHeartSelected = false
+        }
+    }
+    
+    
+    
     var orderPrice: Int?
     
     @IBAction func minusButton(_ sender: UIButton) {

@@ -10,7 +10,7 @@ import UIKit
 class CommercialViewController: MainViewController {
     
     // Header
-//    @IBOutlet weak var headerLine: UIView!
+    @IBOutlet weak var header: UIView!
     
     // 광고 제목 View
     @IBOutlet weak var titleView: UIView!
@@ -26,13 +26,7 @@ class CommercialViewController: MainViewController {
         
         
         // Header 하단 그림자 넣기
-//        headerLine.layer.borderWidth = 1
-//        headerLine.layer.borderColor = UIColor.lightGray.cgColor
-//        headerLine.layer.masksToBounds = false
-//        headerLine.layer.shadowColor = UIColor.lightGray.cgColor
-//        headerLine.layer.shadowOffset = CGSize(width: 0, height: 20)
-//        headerLine.layer.shadowOpacity = 0.8
-//        headerLine.layer.shadowRadius = 5
+//        addShadow(header, color: UIColor.lightGray.cgColor, width: 0, height: 5, alpha: 0.5, radius: 10)
         
         
         // 제목View 테두리 지정

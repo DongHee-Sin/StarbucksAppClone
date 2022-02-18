@@ -89,6 +89,14 @@ class MainViewController: UIViewController, ProductDataDelegate {
         to.layer.cornerRadius = size
     }
     
+    // 그림자 추가
+    func addShadow(_ to: UIView, color: CGColor, width: CGFloat, height: CGFloat, alpha: Float, radius: CGFloat) {
+        to.layer.shadowColor = color
+        to.layer.shadowOpacity = alpha
+        to.layer.shadowRadius = radius
+        to.layer.shadowOffset = CGSize(width: width, height: height)
+        to.layer.shadowPath = nil
+    }
     
     
     
