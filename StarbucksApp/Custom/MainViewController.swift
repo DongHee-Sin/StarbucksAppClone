@@ -144,7 +144,9 @@ class MainViewController: UIViewController, ProductDataDelegate {
         tabBarController?.tabBar.isHidden = true
     }
     
-    
+    func tabBarControllerShow() {
+        tabBarController?.tabBar.isHidden = false
+    }
     
     
     

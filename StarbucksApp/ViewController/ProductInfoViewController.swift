@@ -95,7 +95,7 @@ class ProductInfoViewController: MainViewController {
     
     // MARK: - View Will Disapppear
     override func viewWillDisappear(_ animated: Bool) {
-        tabBarController?.tabBar.isHidden = false
+        tabBarControllerShow()
 
     }
     
