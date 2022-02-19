@@ -11,7 +11,9 @@
 		D00B209E27BD039C001DFA0D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00B209D27BD039C001DFA0D /* MainViewController.swift */; };
 		D0120FC927BE3EED0026B394 /* PayTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0120FC827BE3EED0026B394 /* PayTabViewController.swift */; };
 		D0120FCB27BE8A880026B394 /* GiftTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0120FCA27BE8A880026B394 /* GiftTabViewController.swift */; };
+		D0445E5727C08CD50026DF73 /* RecommendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0445E5627C08CD50026DF73 /* RecommendListViewController.swift */; };
 		D07EB10B27BBEC0B008A3D23 /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07EB10A27BBEC0B008A3D23 /* ProductInfo.swift */; };
+		D088881527C084B60012920B /* DrinkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088881427C084B50012920B /* DrinkListViewController.swift */; };
 		D0962BA127BCA82800E8B199 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0962BA027BCA82800E8B199 /* PopUpViewController.swift */; };
 		D0962BA327BCCF4700E8B199 /* CommercialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0962BA227BCCF4700E8B199 /* CommercialViewController.swift */; };
 		D09CE37827BFCA2F00BA1AC4 /* EentireMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CE37727BFCA2F00BA1AC4 /* EentireMenuViewController.swift */; };
@@ -32,7 +34,9 @@
 		D00B209D27BD039C001DFA0D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D0120FC827BE3EED0026B394 /* PayTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTabViewController.swift; sourceTree = "<group>"; };
 		D0120FCA27BE8A880026B394 /* GiftTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftTabViewController.swift; sourceTree = "<group>"; };
+		D0445E5627C08CD50026DF73 /* RecommendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendListViewController.swift; sourceTree = "<group>"; };
 		D07EB10A27BBEC0B008A3D23 /* ProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfo.swift; sourceTree = "<group>"; };
+		D088881427C084B50012920B /* DrinkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListViewController.swift; sourceTree = "<group>"; };
 		D0962BA027BCA82800E8B199 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		D0962BA227BCCF4700E8B199 /* CommercialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialViewController.swift; sourceTree = "<group>"; };
 		D09CE37727BFCA2F00BA1AC4 /* EentireMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EentireMenuViewController.swift; sourceTree = "<group>"; };
@@ -64,9 +68,13 @@
 		D0A8D3BA27BD0D4500691740 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D09CE41427BFB8D200F202AC /* OrderTabViewController.swift */,
+				D09CE37727BFCA2F00BA1AC4 /* EentireMenuViewController.swift */,
+				D0120FCA27BE8A880026B394 /* GiftTabViewController.swift */,
 				D0D7EE4527BDDB0F008C95B1 /* PaymentViewController.swift */,
 				D00B209B27BCFC67001DFA0D /* OrderViewController.swift */,
 				D0962BA227BCCF4700E8B199 /* CommercialViewController.swift */,
+				D088881427C084B50012920B /* DrinkListViewController.swift */,
 				D0962BA027BCA82800E8B199 /* PopUpViewController.swift */,
 				D0F800FA27BB743600AB459C /* ProductInfoViewController.swift */,
 				D0C75FFE27B8925200ED0DC4 /* ViewController.swift */,
@@ -116,9 +124,7 @@
 				D0A8D3BA27BD0D4500691740 /* ViewController */,
 				D0A8D3BB27BD0D7700691740 /* Custom */,
 				D0C7600027B8925200ED0DC4 /* Main.storyboard */,
-				D09CE41427BFB8D200F202AC /* OrderTabViewController.swift */,
-				D09CE37727BFCA2F00BA1AC4 /* EentireMenuViewController.swift */,
-				D0120FCA27BE8A880026B394 /* GiftTabViewController.swift */,
+				D0445E5627C08CD50026DF73 /* RecommendListViewController.swift */,
 				D07EB10A27BBEC0B008A3D23 /* ProductInfo.swift */,
 				D0C7600327B8925300ED0DC4 /* Assets.xcassets */,
 				D0C7600527B8925300ED0DC4 /* LaunchScreen.storyboard */,
@@ -198,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0445E5727C08CD50026DF73 /* RecommendListViewController.swift in Sources */,
 				D0F800F927BB40D500AB459C /* CustomClass.swift in Sources */,
 				D09CE41527BFB8D200F202AC /* OrderTabViewController.swift in Sources */,
 				D0120FC927BE3EED0026B394 /* PayTabViewController.swift in Sources */,
@@ -209,6 +216,7 @@
 				D07EB10B27BBEC0B008A3D23 /* ProductInfo.swift in Sources */,
 				D09CE37827BFCA2F00BA1AC4 /* EentireMenuViewController.swift in Sources */,
 				D0D7EE4627BDDB0F008C95B1 /* PaymentViewController.swift in Sources */,
+				D088881527C084B60012920B /* DrinkListViewController.swift in Sources */,
 				D0F800FB27BB743600AB459C /* ProductInfoViewController.swift in Sources */,
 				D0C75FFD27B8925200ED0DC4 /* SceneDelegate.swift in Sources */,
 				D00B209C27BCFC67001DFA0D /* OrderViewController.swift in Sources */,

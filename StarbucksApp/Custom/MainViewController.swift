@@ -70,9 +70,20 @@ class MainViewController: UIViewController, ProductDataDelegate {
         }
         paymentView.delegate = self
         
-//        self.navigationController?.pushViewController(paymentView, animated: true)
         self.present(paymentView, animated: true, completion: nil)
     }
+    
+    
+    // 추천리스트 이동하는 버튼
+    @objc func didRecommendButtonTouched() {
+        guard let recommendListView = storyboard?.instantiateViewController(withIdentifier: "recommendListView") as? RecommendListViewController else {
+            return
+        }
+//        navigationController?.isNavigationBarHidden = false
+//        self.navigationController?.pushViewController(recommendListView, animated: true)
+        self.present(recommendListView, animated: true, completion: nil)
+    }
+    
     
     
     

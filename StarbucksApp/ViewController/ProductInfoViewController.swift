@@ -53,7 +53,6 @@ class ProductInfoViewController: MainViewController {
     
     // 뒤로가기 버튼
     @IBAction func fallBackButton(_ sender: UIButton) {
-        tabBarController?.tabBar.isHidden = false
         popView(animation: true)
     }
     
@@ -67,6 +66,8 @@ class ProductInfoViewController: MainViewController {
     var receivedProductName: String?
     
     
+    
+    // MARK: - View Did Lead
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,7 +77,7 @@ class ProductInfoViewController: MainViewController {
         
         
         // 주문버튼 테두리 둥글게
-        addRadiusToUIButton(orderButton, size: 15)
+        addRadiusToUIButton(orderButton, size: 20)
         
         
         // 탭바 숨기기
@@ -89,6 +90,13 @@ class ProductInfoViewController: MainViewController {
         // delegate로 받아온 데이터 처리
         receivedProductName = delegate?.getProductName() ?? ""
         viewUpdateBy(receivedProductName!)
+    }
+    
+    
+    // MARK: - View Will Disapppear
+    override func viewWillDisappear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+
     }
     
     
