@@ -42,8 +42,10 @@ class MainViewController: UIViewController, ProductDataDelegate {
         }
         productView.delegate = self
         
+        print(#function)
         self.navigationController?.pushViewController(productView, animated: true)
     }
+    
     
     // 광고 버튼
     @objc func didCommercialButtonTouched() {
@@ -159,5 +161,7 @@ class MainViewController: UIViewController, ProductDataDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
 }

@@ -1555,7 +1555,7 @@
         <!--Product Info View Controller-->
         <scene sceneID="H33-oT-8H4">
             <objects>
-                <viewController storyboardIdentifier="productView" id="rKN-bt-AUy" customClass="ProductInfoViewController" customModule="StarbucksApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="productView" modalPresentationStyle="fullScreen" id="rKN-bt-AUy" customClass="ProductInfoViewController" customModule="StarbucksApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2pe-mc-8fh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5804,6 +5804,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="23.5" height="24"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="forBackButtonTouched:" destination="XLI-vt-D1S" eventType="touchUpInside" id="uC2-Yf-rrc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -5898,10 +5901,16 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZW-K4-X93">
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstItem="8Ch-6Y-Ysj" firstAttribute="top" secondItem="onc-EJ-4x2" secondAttribute="bottom" constant="5" id="1tz-Zo-TFj"/>
+                                                            <constraint firstItem="FZW-K4-X93" firstAttribute="leading" secondItem="l2X-iA-6Bs" secondAttribute="leading" id="6IF-pb-DMA"/>
                                                             <constraint firstItem="onc-EJ-4x2" firstAttribute="centerY" secondItem="bZe-l5-lKy" secondAttribute="centerY" constant="-20" id="B9C-7m-rfw"/>
                                                             <constraint firstItem="bZe-l5-lKy" firstAttribute="centerY" secondItem="l2X-iA-6Bs" secondAttribute="centerY" id="BmB-br-sFa"/>
                                                             <constraint firstItem="8Ch-6Y-Ysj" firstAttribute="leading" secondItem="onc-EJ-4x2" secondAttribute="leading" id="RjS-jc-i5g"/>
@@ -5909,10 +5918,13 @@
                                                             <constraint firstItem="UhH-gr-crN" firstAttribute="centerY" secondItem="onc-EJ-4x2" secondAttribute="centerY" id="VRk-Sk-udj"/>
                                                             <constraint firstItem="bZe-l5-lKy" firstAttribute="leading" secondItem="l2X-iA-6Bs" secondAttribute="leading" constant="25" id="dSj-C2-ATz"/>
                                                             <constraint firstItem="bZe-l5-lKy" firstAttribute="width" secondItem="l2X-iA-6Bs" secondAttribute="width" multiplier="0.25" id="fT1-ZZ-0L2"/>
+                                                            <constraint firstItem="FZW-K4-X93" firstAttribute="top" secondItem="l2X-iA-6Bs" secondAttribute="top" id="g5F-WY-IC2"/>
+                                                            <constraint firstAttribute="bottom" secondItem="FZW-K4-X93" secondAttribute="bottom" id="hW0-l6-N5w"/>
                                                             <constraint firstItem="UhH-gr-crN" firstAttribute="leading" secondItem="onc-EJ-4x2" secondAttribute="trailing" constant="5" id="hbX-bW-Kn5"/>
                                                             <constraint firstItem="Woe-Hq-fWJ" firstAttribute="top" secondItem="8Ch-6Y-Ysj" secondAttribute="bottom" constant="10" id="mth-yx-FzC"/>
                                                             <constraint firstItem="Woe-Hq-fWJ" firstAttribute="leading" secondItem="8Ch-6Y-Ysj" secondAttribute="leading" id="pM7-W3-vdp"/>
                                                             <constraint firstAttribute="width" secondItem="l2X-iA-6Bs" secondAttribute="height" multiplier="207:60" id="uQu-5p-wg3"/>
+                                                            <constraint firstAttribute="trailing" secondItem="FZW-K4-X93" secondAttribute="trailing" id="ugJ-Vc-MXf"/>
                                                             <constraint firstItem="UhH-gr-crN" firstAttribute="width" secondItem="l2X-iA-6Bs" secondAttribute="width" multiplier="0.06" id="wDb-Xf-dR1"/>
                                                         </constraints>
                                                     </view>
@@ -6299,6 +6311,9 @@
                             <constraint firstItem="plX-XJ-klk" firstAttribute="top" secondItem="zNc-nY-ZTs" secondAttribute="bottom" id="udI-YK-44G"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="a" destination="FZW-K4-X93" id="yXq-hq-EaB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DiN-AF-MPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,7 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        isUserLikeProduct.keys.forEach({
+            isUserLikeProduct[$0] = UserDefaults.standard.bool(forKey: $0)
+        })
+        
         return true
     }
 
@@ -33,7 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     
-    // MARK: - 팝업광고 띄우기 (여기서 1회성 설정?)
-    
+    // MARK: - 좋아요 여부 유저디폴트에 저장
+    func applicationWillTerminate(_ application: UIApplication) {
+        for (key, value) in isUserLikeProduct {
+            UserDefaults.standard.set(value, forKey: key)
+        }
+    }
 }
 

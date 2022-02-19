@@ -154,8 +154,6 @@ class OrderViewController: MainViewController {
         }
         
         
-        
-        
         // UI 세팅
         addBorderToUIView(footerLine, size: 1, color: UIColor.lightGray.cgColor)
         addBorderToUIButton(putInButton, size: 1, color: UIColor(red: 18/255, green: 166/255, blue: 104/255, alpha: 1).cgColor)
@@ -163,4 +161,11 @@ class OrderViewController: MainViewController {
         addRadiusToUIButton(putInButton, size: 20)
         addRadiusToUIView(headerLine, size: 3)
     }
+    
+    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        if isUserLikeProduct[productName.text!]! == true {
+//            UserDefaults.standard.set(true, forKey: productName.text!)
+//        }
+//    }
 }
