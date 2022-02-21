@@ -81,9 +81,9 @@ class MainViewController: UIViewController, ProductDataDelegate {
         guard let recommendListView = storyboard?.instantiateViewController(withIdentifier: "recommendListView") as? RecommendListViewController else {
             return
         }
-//        navigationController?.isNavigationBarHidden = false
-//        self.navigationController?.pushViewController(recommendListView, animated: true)
-        self.present(recommendListView, animated: true, completion: nil)
+        navigationController?.isNavigationBarHidden = false
+        self.navigationController?.pushViewController(recommendListView, animated: true)
+//        self.present(recommendListView, animated: true, completion: nil)
     }
     
     

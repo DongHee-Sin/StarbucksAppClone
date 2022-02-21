@@ -3756,7 +3756,7 @@
             </objects>
             <point key="canvasLocation" x="1505.7971014492755" y="944.86607142857133"/>
         </scene>
-        <!--Order-->
+        <!--Order Tab View Controller-->
         <scene sceneID="rVR-Ye-fPX">
             <objects>
                 <viewController id="RfQ-Lm-1VZ" customClass="OrderTabViewController" customModule="StarbucksApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -3765,7 +3765,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3C-KH-fZm" userLabel="Header">
-                                <rect key="frame" x="0.0" y="44" width="414" height="59"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="59"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="그림자 라인" translatesAutoresizingMaskIntoConstraints="NO" id="alI-Wn-vmz">
                                         <rect key="frame" x="0.0" y="54" width="414" height="15"/>
@@ -3809,7 +3809,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D3V-Cl-BTz">
-                                <rect key="frame" x="0.0" y="108" width="414" height="117"/>
+                                <rect key="frame" x="0.0" y="152" width="414" height="117"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TF6-MF-6VU" userLabel="orderView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="75.5"/>
@@ -3953,13 +3953,13 @@
                                 </subviews>
                             </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IqX-PC-6Dw" userLabel="전체 메뉴 View">
-                                <rect key="frame" x="0.0" y="225" width="414" height="529"/>
+                                <rect key="frame" x="0.0" y="269" width="414" height="485"/>
                                 <connections>
                                     <segue destination="1bX-KU-abZ" kind="embed" id="QAO-OA-5n2"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4t-2x-xUO" userLabel="나만의 메뉴 View">
-                                <rect key="frame" x="0.0" y="225" width="414" height="529"/>
+                                <rect key="frame" x="0.0" y="269" width="414" height="485"/>
                                 <connections>
                                     <segue destination="xdf-RQ-GnH" kind="embed" id="vfG-Sp-1bh"/>
                                 </connections>
@@ -4045,7 +4045,7 @@
                             <constraint firstItem="G5s-lx-sHR" firstAttribute="top" secondItem="l4t-2x-xUO" secondAttribute="bottom" id="xP1-42-fFn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Order" image="cup.and.saucer" catalog="system" id="ubR-WX-Aa8"/>
+                    <navigationItem key="navigationItem" id="6WT-R9-OtH"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="entireGreenBar" destination="2qc-YW-Buh" id="AhR-Gy-d2Y"/>
@@ -4060,7 +4060,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pvs-o6-Sic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Z5i-nD-0WB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2307.2463768115945" y="944.86607142857133"/>
+            <point key="canvasLocation" x="3217.3913043478265" y="944.86607142857133"/>
         </scene>
         <!--Gift-->
         <scene sceneID="hgL-LC-oVQ">
@@ -4217,7 +4217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IEg-Lb-4ZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3136" y="945"/>
+            <point key="canvasLocation" x="4044.9275362318845" y="944.86607142857133"/>
         </scene>
         <!--Other-->
         <scene sceneID="1LH-rf-Afr">
@@ -4893,7 +4893,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEb-dr-eBD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3953.6231884057975" y="944.86607142857133"/>
+            <point key="canvasLocation" x="4863.768115942029" y="944.86607142857133"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cBu-Ny-jIP">
@@ -4910,7 +4910,7 @@
                     <connections>
                         <segue destination="ZKL-dk-rWl" kind="relationship" relationship="viewControllers" id="ZsC-Sn-iFj"/>
                         <segue destination="ERw-iS-PuX" kind="relationship" relationship="viewControllers" id="zff-ET-HCY"/>
-                        <segue destination="RfQ-Lm-1VZ" kind="relationship" relationship="viewControllers" id="7Y7-Ov-TJd"/>
+                        <segue destination="plC-3V-voD" kind="relationship" relationship="viewControllers" id="7Y7-Ov-TJd"/>
                         <segue destination="ZdV-cm-NH7" kind="relationship" relationship="viewControllers" id="4Cz-Vt-Z2C"/>
                         <segue destination="j7l-qc-bAz" kind="relationship" relationship="viewControllers" id="q2x-jp-38U"/>
                     </connections>
@@ -5090,11 +5090,11 @@
             <objects>
                 <viewController id="xdf-RQ-GnH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cBn-qA-AZX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="529"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="485"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZG9-0U-5oc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="485"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="441"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arK-Lm-6TE">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="497"/>
@@ -5143,7 +5143,7 @@
             <objects>
                 <viewController id="1bX-KU-abZ" customClass="EntireMenuViewController" customModule="StarbucksApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDr-RS-CWn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="529"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="485"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYX-NZ-rce" userLabel="Header">
@@ -5243,19 +5243,19 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nL-EC-CAH" userLabel="음료">
-                                <rect key="frame" x="0.0" y="96" width="414" height="433"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="389"/>
                                 <connections>
                                     <segue destination="j3p-m1-msf" kind="embed" id="8sR-pT-0bV"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkU-Jv-n9F" userLabel="푸드">
-                                <rect key="frame" x="0.0" y="96" width="414" height="433"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="389"/>
                                 <connections>
                                     <segue destination="cQh-R6-YjV" kind="embed" id="OsX-uH-49j"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fya-fX-q0J" userLabel="상품">
-                                <rect key="frame" x="0.0" y="96" width="414" height="433"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="389"/>
                                 <connections>
                                     <segue destination="Su7-pO-UfK" kind="embed" id="YJv-3G-xib"/>
                                 </connections>
@@ -5300,11 +5300,11 @@
             <objects>
                 <viewController id="j3p-m1-msf" customClass="DrinkListViewController" customModule="StarbucksApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Mo-kj-MSo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="433"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="389"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-HG-HwF">
-                                <rect key="frame" x="0.0" y="44" width="414" height="389"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="345"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sd-mb-zho">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1166"/>
@@ -6317,18 +6317,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DiN-AF-MPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785.5072463768117" y="2642.4107142857142"/>
+            <point key="canvasLocation" x="1788" y="2638"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Rtv-Yt-JhL">
             <objects>
                 <viewController id="cQh-R6-YjV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0kq-CV-x2h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="433"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="389"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mF-se-8pg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="389"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="345"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vL0-Ds-rXA">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="545"/>
@@ -6555,11 +6555,11 @@
             <objects>
                 <viewController id="Su7-pO-UfK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gvv-fF-DYQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="433"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="389"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ht-vu-Eiz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="389"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="345"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEE-mP-Ttl">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="648.5"/>
@@ -6816,6 +6816,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Nh-tE-6ls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3133" y="2074"/>
+        </scene>
+        <!--Order-->
+        <scene sceneID="CUs-yk-PK5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="plC-3V-voD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Order" image="cup.and.saucer" catalog="system" id="ubR-WX-Aa8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pxT-Bm-TVH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RfQ-Lm-1VZ" kind="relationship" relationship="rootViewController" id="uPT-uJ-uPo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUL-JH-R1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2307.2463768115945" y="944.86607142857133"/>
         </scene>
     </scenes>
     <resources>
