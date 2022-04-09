@@ -25,16 +25,16 @@
 
 ### 구현된 화면
 * 팝업 View
-* Home탭 (메인화면)
-* Pay탭
-* Order탭 (상단탭 구현)
+* Home View (메인화면)
+* Pay View
+* Order View (상단탭 구현)
   * 음료탭
   * 푸드탭
   * 상품탭
   * 추천상품 리스트 View
 
-* Gift탭
-* Other탭
+* Gift View
+* Other View
 * 상품정보 View
 * 주문 View
 * 결제 View
