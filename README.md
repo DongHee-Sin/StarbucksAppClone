@@ -1,6 +1,7 @@
 # 라이징캠프 2주차 과제
 #### 클론코딩 어플 : 스타벅스
 #### 기간: 2022/02/12 ~ 2022/02/19
+[실행영상](https://drive.google.com/file/d/1ty5JIaVsDDYafQCLGgr7zTxrTw95skr4/view?usp=sharing)
 
 <br/>
 
